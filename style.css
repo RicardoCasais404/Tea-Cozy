@@ -18,13 +18,73 @@ html {
       HEADER RULES
 ----------------------*/
 
+main {
+  padding-top: 69px;
+}
 
+header {
+      height: 69px;
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid seashell;
+      position: fixed;
+      background-color: black;
+      width: 100%;
+      top: 0;
+      display: flex;
+}
+
+nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 69px;
+      align-items: center;
+      width: 100%;
+}
+
+nav img {
+      height: 50px;
+      padding-left: 10px;
+}
+
+nav ul {
+      display: flex;
+      list-style-type: none;
+      flex-direction: row;
+      text-decoration: underline;
+      align-items: center;
+      gap: 20px;
+      padding-right: 30px;
+      margin-left: auto;
+      color: seashell;
+}
 
 
 /*--------------------
       MAIN RULES
 ----------------------*/
 
+.mission .banner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+}
+.mission .banner img {
+      width: 1200px;
+      height: 700px;
+}
+
+.featured div img {
+      width: 300px;
+      height: 200px;
+}
+
+.locations img {
+      width: 1200px;
+      height: 500px;
+}
 
 
 
