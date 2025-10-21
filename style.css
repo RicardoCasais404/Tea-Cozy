@@ -52,12 +52,20 @@ nav ul {
       display: flex;
       list-style-type: none;
       flex-direction: row;
-      text-decoration: underline;
       align-items: center;
       gap: 20px;
       padding-right: 30px;
       margin-left: auto;
+}
+
+nav ul li a {
       color: seashell;
+      text-decoration: underline;
+}
+
+nav ul li a:hover {
+      color: seashell;
+      text-decoration: none;
 }
 
 
@@ -66,14 +74,39 @@ nav ul {
 ----------------------*/
 
 .mission .banner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  overflow: hidden;
 }
+
 .mission .banner img {
-      width: 1200px;
-      height: 700px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: seashell;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1px;
+  background-color: black;
+  height: 150px;
+  width: 100%;
 }
 
 .featured div img {
