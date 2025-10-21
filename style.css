@@ -28,8 +28,7 @@ main { padding-top: var(--header-h); }
       max-width: var(--container);
       margin-left: auto;
       margin-right: auto;
-      padding-left: 30px;
-      padding-right: 30px;
+
 }
 
 
@@ -183,53 +182,53 @@ header {
 /*--------- LOCATIONS SECTION -----------*/
 /*---------------------------------------*/
 
-.locations {
-      padding: 0;
-      margin: 0;
-      background-color: var(--bg);
+.locations-banner {
+      background-color: var(--bg); /* fills full width */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 500px;
+      overflow: hidden;
 }
 
-.locations-banner {
+.locations-inner {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      max-width: var(--container);
-      margin: 0 auto;
-      height: 500px;
+      width: var(--container);
+      max-width: 100%;
+      height: 100%;
       background-image: url("images/img-locations-background.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      overflow: hidden;
-}
-
-.locations-banner h2 {
-      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 30px;
+      box-sizing: border-box;
 }
 
 .location-list {
       display: flex;
       gap: 40px;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-wrap: wrap;                   
+      align-items: flex-start;       
       z-index: 2;
-      padding: 0;
       margin: 0 auto;
 }
 
 .location {
-      width: 300px;
+      flex: 0 0 300px;                   
       height: 300px;
-      background-color: var(--bg);
-      color: seashell;
-      text-align: center;
+      background-color: rgba(0,0,0,0.9);
+      color: var(--fg);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 0;
+      align-items: center;
+      box-sizing: border-box;
+      text-align: center;
 }
 
 
@@ -240,38 +239,38 @@ header {
 /*---------------------------------------*/
 
 .contact {
-  background-color: var(--bg);
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      background-color: var(--bg);
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 
 .contact-box {
-  width: var(--container);
-  max-width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  color: var(--fg);
+      width: var(--container);
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      color: var(--fg);
 }
 
 .contact-box h2 {
-  margin: 10px 0 60px 0;
-  font-size: 1.6rem;
+      margin: 10px 0 60px 0;
+      font-size: 1.6rem;
 }
 
 .contact-box h5:first-of-type {
-  margin: 9px 0 40px 0;
-  font-weight: 600;
+      margin: 9px 0 40px 0;
+      font-weight: 600;
 }
 
 .contact-box h5:last-of-type {
-  margin: 0;
-  font-weight: 600;
+      margin: 0;
+      font-weight: 600;
 }
 
 
