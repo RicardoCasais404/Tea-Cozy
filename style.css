@@ -1,126 +1,225 @@
-/*--------------------
-      HTML RULES
-----------------------*/
+/*--------------------------------------------------------------------------*/
+/*---------------------------- BASE AND RESET ------------------------------*/
+/*--------------------------------------------------------------------------*/
 
-html {
-    font-family: Helvetica, sans-serif;
-    font-size: 22px;
-    color: seashell;
-    background-color: black;
-    margin: 0;
-    padding: 0;
+:root {
+      --bg: #000;
+      --fg: seashell;
+      --container: 1200px;
+      --header-h: 69px;
+      --gap: 40px;
+}
+
+* { box-sizing: border-box; }
+
+html,body {
+      height: 100%;
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: Helvetica, sans-serif;
+      font-size: 22px;
+      -webkit-font-smoothing: antialiased;
+}
+
+main { padding-top: var(--header-h); }
+
+.container-centered {
+      max-width: var(--container);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 30px;
+      padding-right: 30px;
 }
 
 
 
 
-/*--------------------
-      HEADER RULES
-----------------------*/
-
-main {
-  padding-top: 69px;
-}
+/*--------------------------------------------------------------------------*/
+/*------------------------------ HEADER RULES ------------------------------*/
+/*--------------------------------------------------------------------------*/
 
 header {
-      height: 69px;
-      margin: 0;
-      padding: 0;
-      border-bottom: 1px solid seashell;
       position: fixed;
-      background-color: black;
-      width: 100%;
       top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-h);
+      border-bottom: 1px solid var(--fg);
+      background: var(--bg);
+      z-index: 60;
       display: flex;
+      align-items: center;
 }
 
-nav {
+.site-nav {
       display: flex;
-      flex-direction: row;
+      align-items: center;
       justify-content: space-between;
-      height: 69px;
-      align-items: center;
       width: 100%;
-}
-
-nav img {
-      height: 50px;
-      padding-left: 10px;
-}
-
-nav ul {
-      display: flex;
-      list-style-type: none;
-      flex-direction: row;
-      align-items: center;
       gap: 20px;
+      padding-left: 30px;
       padding-right: 30px;
-      margin-left: auto;
 }
 
-nav ul li a {
-      color: seashell;
+.logo { height: 50px; display: block; }
+
+.nav-list {
+      display: flex;
+      gap: 20px;
+      margin-left: auto; 
+      list-style: none;
+      padding: 0;
+      margin: 0;
+}
+
+.nav-list a {
+      color: var(--fg);
       text-decoration: underline;
+      line-height: 1;
 }
 
-nav ul li a:hover {
-      color: seashell;
-      text-decoration: none;
-}
+.nav-list a:hover { text-decoration: none; }
 
 
-/*--------------------
-      MAIN RULES
-----------------------*/
+
+
+/*--------------------------------------------------------------------------*/
+/*----------------------------- MAIN RULES ---------------------------------*/
+/*--------------------------------------------------------------------------*/
 
 .mission .banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 1200px;
-  height: 700px;
-  overflow: hidden;
+      width: 100%;                     
+      max-width: var(--container);     
+      margin: 0 auto;                  
+      height: 700px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 0;
+      background-image: url("images/img-mission-background.jpg");
+      background-size: cover;          
+      background-position: center;     
+      background-repeat: no-repeat;
+      overflow: hidden;
 }
 
-.mission .banner img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
+.mission .banner .banner-text {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      background: var(--bg);
+      padding: 16px 0;
+      width: var(--container);
+      max-width: 100%;    
+      text-align: center;
+      z-index: 2;
 }
 
-.banner-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: seashell;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1px;
-  background-color: black;
-  height: 150px;
-  width: 100%;
+.mission .banner h2 {
+      margin: 0;
 }
 
-.featured div img {
+.mission .banner h4 {
+      margin: 0;
+      padding-top: 10px;
+      padding-bottom: 0;
+      font-weight: 400;
+      max-width: 100%;
+}
+
+
+
+/*---------------------------------------*/
+/*---------- FEATURED SECTION -----------*/
+/*---------------------------------------*/
+
+.featured {
+      padding: var(--gap) 0;
+      text-align: center;
+}
+
+.tea-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      max-width: var(--container);
+      margin: 30px auto 0;
+      padding: 0 30px;
+}
+
+.tea-item {
       width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+}
+
+.tea-item img {
+      width: 100%;
       height: 200px;
-}
-
-.locations img {
-      width: 1200px;
-      height: 500px;
+      object-fit: cover;
+      display: block;
 }
 
 
 
-/*--------------------
-      FOOTER RULES
-----------------------*/
+
+/*---------------------------------------*/
+/*--------- LOCATIONS SECTION -----------*/
+/*---------------------------------------*/
+
+.locations {
+  padding: var(--gap) 0 60px;
+}
+
+.locations-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 30px;
+}
+
+.locations-inner h2 {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+}
+
+.location-list {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      margin-top: 15px;
+      flex-wrap: wrap;
+      padding: 0;
+}
+
+.location {
+      width: 300px;
+      height: 300px;
+      text-align: center;
+      background-color: var(--bg);
+}
+
+
+
+
+/*--------------------------------------------------------------------------*/
+/*------------------------------ FOOTER RULES ------------------------------*/
+/*--------------------------------------------------------------------------*/
+
+footer {
+      text-align: center;
+      padding: 40px 30px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+footer p {
+      margin-left: 20px;
+      padding: 0;
+      text-align: left;
+}
